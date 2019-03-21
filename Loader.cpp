@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Loader.h"
+#include <assert.h>
 
 using std::string;
 
@@ -11,6 +12,10 @@ Loader::Loader(string dllName, string funcName)
 	this->_dllName = dllName;
 	this->_funcName = funcName;
 	this->_library = LoadLibrary(_dllName.c_str());
+	if (this->_library == NULL)
+	{
+		assert("Uhoh!");
+	}
 }
 
 Loader::Loader(string dllName, string funcName, HINSTANCE__ *loadedLibrary)
