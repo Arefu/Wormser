@@ -14,7 +14,7 @@ Loader::Loader(string dllName, string funcName)
 	this->_library = LoadLibrary(_dllName.c_str());
 	if (this->_library == NULL)
 	{
-		assert("Uhoh!");
+		assert("Uh-Oh!");
 	}
 }
 

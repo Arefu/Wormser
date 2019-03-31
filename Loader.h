@@ -22,7 +22,5 @@ private:
 	std::string _funcName;
 	HINSTANCE__  *_library;
 	FARPROC _function;
-
-
 };
 
